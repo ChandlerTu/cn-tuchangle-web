@@ -13,7 +13,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Dietary {
+public class FoodDiary {
+
+  private Date date;
 
   private String food;
 
@@ -22,7 +24,5 @@ public class Dietary {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
-
-  private Date insertTime;
 
 }

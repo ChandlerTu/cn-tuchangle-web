@@ -10,27 +10,27 @@ import org.springframework.stereotype.Component;
 public class DatabaseLoader implements CommandLineRunner {
 
   @Autowired
-  private DietaryRepository repository;
+  private FoodDiaryRepository repository;
 
   @Override
   public void run(String... strings) throws Exception {
-    Dietary dietary = new Dietary();
-    dietary.setFood("苹果");
-    dietary.setGram(100);
-    dietary.setInsertTime(new Date());
-    this.repository.save(dietary);
+    FoodDiary foodDiary1 = new FoodDiary();
+    foodDiary1.setFood("苹果");
+    foodDiary1.setGram(100);
+    foodDiary1.setDate(new Date());
+    this.repository.save(foodDiary1);
 
-    Dietary dietary2 = new Dietary();
-    dietary2.setFood("香蕉");
-    dietary2.setGram(200);
-    dietary2.setInsertTime(new Date());
-    this.repository.save(dietary2);
+    FoodDiary foodDiary2 = new FoodDiary();
+    foodDiary2.setFood("香蕉");
+    foodDiary2.setGram(200);
+    foodDiary2.setDate(new Date());
+    this.repository.save(foodDiary2);
 
-    Dietary dietary3 = new Dietary();
-    dietary3.setFood("葡萄");
-    dietary3.setGram(300);
-    dietary3.setInsertTime(new Date());
-    this.repository.save(dietary3);
+    FoodDiary foodDiary3 = new FoodDiary();
+    foodDiary3.setFood("葡萄");
+    foodDiary3.setGram(300);
+    foodDiary3.setDate(new Date());
+    this.repository.save(foodDiary3);
   }
 
 }
