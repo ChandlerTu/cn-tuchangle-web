@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +17,8 @@ import lombok.Setter;
 @Setter
 public class FoodDiary {
 
-  private Date date;
+  @Temporal(TemporalType.DATE)
+  private Date date = new Date();
 
   private String food;
 
