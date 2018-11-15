@@ -18,7 +18,7 @@ import lombok.Setter;
 public class FoodDiary {
 
   @Temporal(TemporalType.DATE)
-  private Date date = new Date();
+  private Date date;
 
   private String food;
 
